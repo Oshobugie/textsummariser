@@ -28,4 +28,13 @@ class ModelTrainerConfig:
     eval_strategy: str
     eval_steps: int
     save_steps: float
-    gradient_accumulation_steps: int    
+    gradient_accumulation_steps: int  
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: str
+    data_path:str
+    model_path:str
+    tokenizer_path:str
+    metric_file_name:str  
